@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_hpfavideo_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="video">Basic video settings</label>
+			<label index="display">Skin</label>
+			<label index="options">Play options</label>
+			
+			<label index="flvfile">FLV file</label>
+			<label index="previmg">Preview image</label>
+			<label index="flvfiledam">FLV file - DAM</label>
+			<label index="previmgdam">Preview image - DAM</label>
+			<label index="width">Player width</label>
+			<label index="height">Player height</label>
+			<label index="controlColor">Control color</label>
+			<label index="backgroundColor">Background color</label>
+			<label index="videoAlign">Video align</label>
+			<label index="skinAutoHide">Autohide skin?</label>
+			<label index="skinVisible">Skin visible?</label>
+			<label index="clickToTogglePlay">Click to toggle play</label>
+			<label index="autoPlay">Autoplay</label>
+			<label index="autoLoad">Autoload</label>
+			<label index="volume">Volume</label>
+
+			<label index="NoSkin">No Skin</label>
+			<label index="skinNo0">Arctic External All</label>
+			<label index="skinNo1">ArcticExternalNoVol</label>
+			<label index="skinNo2">ArcticExternalPlayMute</label>
+			<label index="skinNo3">ArcticExternalPlaySeekMute</label>
+			<label index="skinNo4">ArcticOverAll</label>
+			<label index="skinNo5">ArcticOverNoVol</label>
+			<label index="skinNo6">ArcticOverPlayMute</label>
+			<label index="skinNo7">ArcticOverPlaySeekMute</label>
+			<label index="skinNo8">ClearExternalAll</label>
+			<label index="skinNo9">ClearExternalNoVol</label>
+			<label index="skinNo10">ClearExternalPlayMute</label>
+			<label index="skinNo11">ClearExternalPlaySeekMute</label>
+			<label index="skinNo12">ClearOverAll</label>
+			<label index="skinNo13">ClearOverNoVol</label>
+			<label index="skinNo14">ClearOverPlayMute</label>
+			<label index="skinNo15">ClearOverPlaySeekMute</label>
+			<label index="skinNo16">MojaveExternalAll</label>
+			<label index="skinNo17">MojaveExternalNoVol</label>
+			<label index="skinNo18">MojaveExternalPlayMute</label>
+			<label index="skinNo19">MojaveExternalPlaySeekMute</label>
+			<label index="skinNo20">MojaveOverAll</label>
+			<label index="skinNo21">MojaveOverNoVol</label>
+			<label index="skinNo22">MojaveOverPlayMute</label>
+			<label index="skinNo23">MojaveOverPlaySeekMute</label>
+			<label index="skinNo24">SteelExternalAll</label>
+			<label index="skinNo25">SteelExternalNoVol</label>
+			<label index="skinNo26">SteelExternalPlayMute</label>
+			<label index="skinNo27">SteelExternalPlaySeekMute</label>
+			<label index="skinNo28">SteelOverAll</label>
+			<label index="skinNo29">SteelOverNoVol</label>
+			<label index="skinNo30">SteelOverPlayMute</label>
+			<label index="skinNo31">SteelOverPlaySeekMute</label>
+
+			<label index="videoAlign.bottom">Bottom</label>
+			<label index="videoAlign.bottomLeft">Bottom Left</label>
+			<label index="videoAlign.bottomRight">Bottom Right</label>
+			<label index="videoAlign.top">Top</label>
+			<label index="videoAlign.topLeft">Top Left</label>
+			<label index="videoAlign.topRight">Top Right</label>
+			<label index="videoAlign.center">Center</label>
+			<label index="videoAlign.left">Left</label>
+			<label index="videoAlign.right">Right</label>
+		</languageKey>
+	</data>
+</T3locallang>

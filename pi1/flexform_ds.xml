@@ -1,0 +1,418 @@
+<T3DataStructure>
+	<meta>
+	<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<video>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:hpfavideo/pi1/locallang.xml:video</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<flvfile>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:flvfile</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>flv</allowed>
+								<max_size>50000</max_size>
+								<uploadfolder>uploads/hpfavideo/</uploadfolder>
+								<show_thumbs>1</show_thumbs>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</flvfile>
+					<previmg>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:previmg</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>jpg,gif,png</allowed>
+								<max_size>500</max_size>
+								<uploadfolder>uploads/hpfavideo/</uploadfolder>
+								<show_thumbs>1</show_thumbs>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</previmg>
+					<flvfiledam>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:flvfiledam</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_dam</allowed>
+								<size>10</size>
+								<prepend_tname>1</prepend_tname>
+								<MM>tx_dam_mm_ref</MM>
+								<MM_foreign_select>1</MM_foreign_select>
+								<MM_opposite_field>1</MM_opposite_field>
+								<MM_match_fields>
+								<ident>hpfavideo</ident>
+								</MM_match_fields>
+								<allowed_types>flv</allowed_types>
+								<maxitems>50</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<autoSizeMax>30</autoSizeMax>
+							</config>
+						</TCEforms>
+  					</flvfiledam>
+					<previmgdam>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:previmgdam</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_dam</allowed>
+								<size>10</size>
+								<prepend_tname>1</prepend_tname>
+								<MM>tx_dam_mm_ref</MM>
+								<MM_foreign_select>1</MM_foreign_select>
+								<MM_opposite_field>1</MM_opposite_field>
+								<MM_match_fields>
+								<ident>hpfavideo</ident>
+								</MM_match_fields>
+								<allowed_types>jpg,gif,png</allowed_types>
+								<maxitems>50</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<autoSizeMax>30</autoSizeMax>
+							</config>
+						</TCEforms>
+  					</previmgdam>
+					<width>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:width</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>3</max>
+								<eval>int</eval>
+							</config>
+						</TCEforms>
+					</width>
+					<height>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:height</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>3</max>
+								<eval>int</eval>
+							</config>
+						</TCEforms>
+					</height>
+				</el>
+			</ROOT>
+		</video>
+		<display>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:hpfavideo/pi1/locallang.xml:display</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<skin>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:skin</label>
+								<config>
+								<type>select</type>
+									<items type="array">
+									<numIndex index="32" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:NoSkin</numIndex>
+										<numIndex index="1">null</numIndex>
+									</numIndex>
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo0</numIndex>
+										<numIndex index="1">ArcticExternalAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo1</numIndex>
+										<numIndex index="1">ArcticExternalNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo2</numIndex>
+										<numIndex index="1">ArcticExternalPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo3</numIndex>
+										<numIndex index="1">ArcticExternalPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo4</numIndex>
+										<numIndex index="1">ArcticOverAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo5</numIndex>
+										<numIndex index="1">ArcticOverNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo6</numIndex>
+										<numIndex index="1">ArcticOverPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo7</numIndex>
+										<numIndex index="1">ArcticOverPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo8</numIndex>
+										<numIndex index="1">ClearExternalAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo9</numIndex>
+										<numIndex index="1">ClearExternalNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo10</numIndex>
+										<numIndex index="1">ClearExternalPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo11</numIndex>
+										<numIndex index="1">ClearExternalPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo12</numIndex>
+										<numIndex index="1">ClearOverAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo13</numIndex>
+										<numIndex index="1">ClearOverNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo14</numIndex>
+										<numIndex index="1">ClearOverPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo15</numIndex>
+										<numIndex index="1">ClearOverPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo16</numIndex>
+										<numIndex index="1">MojaveExternalAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo17</numIndex>
+										<numIndex index="1">MojaveExternalNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo18</numIndex>
+										<numIndex index="1">MojaveExternalPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo19</numIndex>
+										<numIndex index="1">MojaveExternalPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo20</numIndex>
+										<numIndex index="1">MojaveOverAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo21</numIndex>
+										<numIndex index="1">MojaveOverNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo22</numIndex>
+										<numIndex index="1">MojaveOverPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo23</numIndex>
+										<numIndex index="1">MojaveOverPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo24</numIndex>
+										<numIndex index="1">SteelExternalAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="25" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo25</numIndex>
+										<numIndex index="1">SteelExternalNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="26" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo26</numIndex>
+										<numIndex index="1">SteelExternalPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="27" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo27</numIndex>
+										<numIndex index="1">SteelExternalPlaySeekMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="28" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo28</numIndex>
+										<numIndex index="1">SteelOverAll.swf</numIndex>
+									</numIndex>
+									<numIndex index="29" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo29</numIndex>
+										<numIndex index="1">SteelOverNoVol.swf</numIndex>
+									</numIndex>
+									<numIndex index="30" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo30</numIndex>
+										<numIndex index="1">SteelOverPlayMute.swf</numIndex>
+									</numIndex>
+									<numIndex index="31" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo31</numIndex>
+										<numIndex index="1">SteelOverPlaySeekMute.swf</numIndex>
+									</numIndex>
+								</items>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</skin>
+					<controlColor>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:controlColor</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<wizards>
+									<color>
+										<type>colorbox</type>
+										<dim>10x10</dim>
+										<tableStyle>margin-left:3px;margin-top:6px;</tableStyle>
+										<script>wizard_colorpicker.php</script>
+										<JSopenParams>height=300,width=400,status=0,menubar=0,scrollbars=1</JSopenParams>
+									</color>
+								</wizards>
+							</config>
+						</TCEforms>
+					</controlColor>
+					<backgroundColor>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:backgroundColor</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<wizards>
+									<color>
+										<type>colorbox</type>
+										<dim>10x10</dim>
+										<tableStyle>margin-left:3px;margin-top:6px;</tableStyle>
+										<script>wizard_colorpicker.php</script>
+										<JSopenParams>height=300,width=400,status=0,menubar=0,scrollbars=1</JSopenParams>
+									</color>
+								</wizards>
+							</config>
+						</TCEforms>
+					</backgroundColor>
+					<videoAlign>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign</label>
+								<config>
+								<type>select</type>
+									<items type="array">
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.center</numIndex>
+										<numIndex index="1">center</numIndex>
+									</numIndex>
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.bottom</numIndex>
+										<numIndex index="1">bottom</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.bottomLeft</numIndex>
+										<numIndex index="1">bottomLeft</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.bottomRight</numIndex>
+										<numIndex index="1">bottomRight</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.top</numIndex>
+										<numIndex index="1">top</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.topLeft</numIndex>
+										<numIndex index="1">topLeft</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.topRight</numIndex>
+										<numIndex index="1">topRight</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.left</numIndex>
+										<numIndex index="1">left</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.right</numIndex>
+										<numIndex index="1">right</numIndex>
+									</numIndex>
+								</items>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</videoAlign>
+					<skinAutoHide>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:skinAutoHide</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</skinAutoHide>
+					<skinVisible>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:skinVisible</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</skinVisible>
+				</el>
+			</ROOT>
+		</display>
+		<options>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:hpfavideo/pi1/locallang.xml:options</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<clickToTogglePlay>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:clickToTogglePlay</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</clickToTogglePlay>
+					<autoPlay>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:autoPlay</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</autoPlay>
+					<autoLoad>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:autoLoad</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</autoLoad>
+					<volume>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:volume</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>3</max>
+								<eval>int</eval>
+							</config>
+						</TCEforms>
+					</volume>
+				</el>
+			</ROOT>
+		</options>
+	</sheets>
+</T3DataStructure>
