@@ -120,6 +120,10 @@
 							<config>
 								<type>select</type>
 								 <items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:scaleMode.default</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
 									<numIndex index="1" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:scaleMode.maintainAspectRatio</numIndex>
 										<numIndex index="1">maintainAspectRatio</numIndex>
@@ -157,7 +161,7 @@
 									<items type="array">
 									<numIndex index="32" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:DefaultSkin</numIndex>
-										<numIndex index="1">null</numIndex>
+										<numIndex index="1">default</numIndex>
 									</numIndex>
 									<numIndex index="0" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:skinNo0</numIndex>
@@ -336,9 +340,9 @@
 								<config>
 								<type>select</type>
 									<items type="array">
-									<numIndex index="6" type="array">
-										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.center</numIndex>
-										<numIndex index="1">center</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.default</numIndex>
+										<numIndex index="1">default</numIndex>
 									</numIndex>
 									<numIndex index="0" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.bottom</numIndex>
@@ -363,6 +367,10 @@
 									<numIndex index="5" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.topRight</numIndex>
 										<numIndex index="1">topRight</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.center</numIndex>
+										<numIndex index="1">center</numIndex>
 									</numIndex>
 									<numIndex index="7" type="array">
 										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:videoAlign.left</numIndex>

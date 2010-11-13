@@ -48,13 +48,14 @@ http://www.adobe.com/go/favideo/
  * FAVideo represents a video player instance on the page. It allows you to instantiate, control,
  * and listen to events from a Flash video player through Javascript.
  *----------------------------------------------------- */
-	FAVideo = function(divName, videoPath, width, height, options, path) {
-		//new parameter path for TYPO3 extension hpflavideo
+	FAVideo = function(divName, videoPath, width, height, options, path, bgColor) {
+		//new parameter path and background color for TYPO3 extension hpflavideo
 		this.DEFAULT_SWF_PATH = path+"FAVideo"; // dot swf is added by AC_RunActiveContent
 		this.DEFAULT_SKIN_PATH = path+"skins/ClearOverAll.swf";
 		this.DEFAULT_WIDTH = 320;
 		this.DEFAULT_HEIGHT = 240;
 		this.ERROR_DIV_NOT_FOUND = "The specified DIV element was not found.";
+		this.DEFAULT_BGCOLOR = bgColor; // new for TYPO3 extension hpflavideo
 		
 		//this.DEFAULT_SKIN_PATH = "skins/ClearExternalAll.swf";
 		
@@ -501,7 +502,7 @@ http://www.adobe.com/go/favideo/
 				"align", "middle",
 				"id", this.name,
 				"quality", "high",
-				"bgcolor", "#000000",
+				"bgcolor", "#" + this.DEFAULT_BGCOLOR, // new for TYPO3 extension hpflavideo //"bgcolor", "#000000",
 				"name", this.name,
 				"allowScriptAccess","always",
 				"type", "application/x-shockwave-flash",
@@ -515,7 +516,7 @@ http://www.adobe.com/go/favideo/
 				"align", "middle",
 				"id", this.name,
 				"quality", "high",
-				"bgcolor", "#000000",
+				"bgcolor", "#" + this.DEFAULT_BGCOLOR, // new for TYPO3 extension hpflavideo //"bgcolor", "#000000",
 				"allowFullScreen", "true", 
 				"name", this.name,
 				"flashvars","playerID="+this.id+"&initialVideoPath="+this.videoPath,

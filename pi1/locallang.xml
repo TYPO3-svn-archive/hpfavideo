@@ -14,6 +14,8 @@
 			<label index="previmg">Preview image</label>
 			<label index="width">Player width</label>
 			<label index="height">Player height</label>
+			<label index="videoScaleMode">Video scale mode</label>
+			<label index="skin">Skin</label>
 			<label index="controlColor">Control color</label>
 			<label index="backgroundColor">Background color</label>
 			<label index="videoAlign">Video align</label>
@@ -24,6 +26,7 @@
 			<label index="autoLoad">Autoload</label>
 			<label index="volume">Volume</label>
 
+			<label index="scaleMode.default">Default scale mode</label>
 			<label index="scaleMode.maintainAspectRatio">Maintain aspect ratio</label>
 			<label index="scaleMode.exactFit">Exact fit</label>
 			<label index="scaleMode.noScale">No scale</label>
@@ -62,6 +65,7 @@
 			<label index="skinNo30">SteelOverPlayMute</label>
 			<label index="skinNo31">SteelOverPlaySeekMute</label>
 
+			<label index="videoAlign.default">Default align</label>
 			<label index="videoAlign.bottom">Bottom</label>
 			<label index="videoAlign.bottomLeft">Bottom Left</label>
 			<label index="videoAlign.bottomRight">Bottom Right</label>
@@ -72,11 +76,19 @@
 			<label index="videoAlign.left">Left</label>
 			<label index="videoAlign.right">Right</label>
 
+			<label index="playlistTitle">Playlist</label>
+			<label index="playlistDescription">Click on a title to watch the video.</label>
 			<label index="noJavaScript">JavaScript is not activated. Please activate it to watch the video.</label>
+			<label index="noFlvFile">No FLV video file is set.</label>
+			<label index="noTypoScriptSet">No TypoScript set. No playlist could be created.</label>
 		</languageKey>
 
 		<languageKey index="de" type="array">
-			<label index="noJavaScript">Du hast kein JavaScript aktiviert. Daher wird kein Video angezeigt.</label>
+			<label index="playlistTitle">Videos</label>
+			<label index="playlistDescription">Klicken Sie zum Abspielen auf eines der Videos.</label>
+			<label index="noJavaScript">Sie haben kein JavaScript aktiviert. Daher wird kein Video angezeigt.</label>
+			<label index="noFlvFile">Kein Video zum Abspielen gefunden.</label>
+			<label index="noTypoScriptSet">Es konnte keine Videoliste erstellt werden, da keine TypoScript-Konfiguration vorhanden ist.</label>
 		</languageKey>
 	</data>
 </T3locallang>

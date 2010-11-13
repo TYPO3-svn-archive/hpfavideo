@@ -1,0 +1,29 @@
+plugin.tx_hpfavideo_pi1 {
+  playlist = COA
+  playlist {
+    wrap = |
+    10 = TEXT
+    10 {
+      wrap = <h3>|</h3>
+      field =  title
+    }
+    20 = TEXT
+    20 {
+      wrap = <em>|</em>
+      field = description
+    }
+    30 = TEXT
+    30 {
+      wrap = <ul>|</ul>
+      field = playlistItems
+    }
+  }
+
+  playlistItem = COA
+  playlistItem {
+    wrap = <li>|</li>
+    10 = TEXT
+    10.value = <a href="javascript:playJAVideo('{field:videopath}','{field:imagepath}')">{field:title}</a>
+    10.insertData = 1        
+  }
+}
