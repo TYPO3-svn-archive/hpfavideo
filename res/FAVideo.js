@@ -48,9 +48,10 @@ http://www.adobe.com/go/favideo/
  * FAVideo represents a video player instance on the page. It allows you to instantiate, control,
  * and listen to events from a Flash video player through Javascript.
  *----------------------------------------------------- */
-	FAVideo = function(divName, videoPath, width, height, options) {
-		this.DEFAULT_SWF_PATH = "FAVideo"; // dot swf is added by AC_RunActiveContent
-		this.DEFAULT_SKIN_PATH = "skins/ClearOverAll.swf";
+	FAVideo = function(divName, videoPath, width, height, options, path) {
+		//new parameter path for TYPO3 extension hpflavideo
+		this.DEFAULT_SWF_PATH = path+"FAVideo"; // dot swf is added by AC_RunActiveContent
+		this.DEFAULT_SKIN_PATH = path+"skins/ClearOverAll.swf";
 		this.DEFAULT_WIDTH = 320;
 		this.DEFAULT_HEIGHT = 240;
 		this.ERROR_DIV_NOT_FOUND = "The specified DIV element was not found.";

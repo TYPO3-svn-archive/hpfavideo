@@ -12,13 +12,14 @@
 				<el>
 					<flvfile>
 						<TCEforms>
+							<displayCond>EXT:dam:LOADED:false</displayCond>
 							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:flvfile</label>
 							<config>
 								<type>group</type>
 								<internal_type>file</internal_type>
 								<allowed>flv</allowed>
 								<max_size>50000</max_size>
-								<uploadfolder>uploads/hpfavideo/</uploadfolder>
+								<uploadfolder>uploads/tx_hpfavideo/</uploadfolder>
 								<show_thumbs>1</show_thumbs>
 								<size>1</size>
 								<minitems>0</minitems>
@@ -28,13 +29,14 @@
 					</flvfile>
 					<previmg>
 						<TCEforms>
+							<displayCond>EXT:dam:LOADED:false</displayCond>
 							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:previmg</label>
 							<config>
 								<type>group</type>
 								<internal_type>file</internal_type>
 								<allowed>jpg,gif,png</allowed>
 								<max_size>500</max_size>
-								<uploadfolder>uploads/hpfavideo/</uploadfolder>
+								<uploadfolder>uploads/tx_hpfavideo/</uploadfolder>
 								<show_thumbs>1</show_thumbs>
 								<size>1</size>
 								<minitems>0</minitems>
@@ -44,18 +46,19 @@
 					</previmg>
 					<flvfiledam>
 						<TCEforms>
-							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:flvfiledam</label>
+							<displayCond>EXT:dam:LOADED:true</displayCond>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:flvfile</label>
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
 								<allowed>tx_dam</allowed>
-								<size>10</size>
+								<size>3</size>
 								<prepend_tname>1</prepend_tname>
 								<MM>tx_dam_mm_ref</MM>
 								<MM_foreign_select>1</MM_foreign_select>
 								<MM_opposite_field>1</MM_opposite_field>
 								<MM_match_fields>
-								<ident>hpfavideo</ident>
+									<ident>hpfavideo_flv</ident>
 								</MM_match_fields>
 								<allowed_types>flv</allowed_types>
 								<maxitems>50</maxitems>
@@ -67,18 +70,19 @@
   					</flvfiledam>
 					<previmgdam>
 						<TCEforms>
-							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:previmgdam</label>
+							<displayCond>EXT:dam:LOADED:true</displayCond>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:previmg</label>
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
 								<allowed>tx_dam</allowed>
-								<size>10</size>
+								<size>3</size>
 								<prepend_tname>1</prepend_tname>
 								<MM>tx_dam_mm_ref</MM>
 								<MM_foreign_select>1</MM_foreign_select>
 								<MM_opposite_field>1</MM_opposite_field>
 								<MM_match_fields>
-								<ident>hpfavideo</ident>
+									<ident>hpfavideo_img</ident>
 								</MM_match_fields>
 								<allowed_types>jpg,gif,png</allowed_types>
 								<maxitems>50</maxitems>
@@ -88,7 +92,7 @@
 							</config>
 						</TCEforms>
   					</previmgdam>
-					<width>
+					<playerwidth>
 						<TCEforms>
 							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:width</label>
 							<config>
@@ -98,8 +102,8 @@
 								<eval>int</eval>
 							</config>
 						</TCEforms>
-					</width>
-					<height>
+					</playerwidth>
+					<playerheight>
 						<TCEforms>
 							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:height</label>
 							<config>
@@ -109,7 +113,32 @@
 								<eval>int</eval>
 							</config>
 						</TCEforms>
-					</height>
+					</playerheight>
+					<videoScaleMode>
+						<TCEforms>
+							<label>LLL:EXT:hpfavideo/pi1/locallang.xml:videoScaleMode</label>
+							<config>
+								<type>select</type>
+								 <items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:scaleMode.maintainAspectRatio</numIndex>
+										<numIndex index="1">maintainAspectRatio</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:scaleMode.exactFit</numIndex>
+										<numIndex index="1">exactFit</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+								 		<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:scaleMode.noScale</numIndex>
+										<numIndex index="1">noScale</numIndex>
+									</numIndex>
+								</items>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</videoScaleMode>
 				</el>
 			</ROOT>
 		</video>
@@ -127,7 +156,7 @@
 								<type>select</type>
 									<items type="array">
 									<numIndex index="32" type="array">
-										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:NoSkin</numIndex>
+										<numIndex index="0">LLL:EXT:hpfavideo/pi1/locallang.xml:DefaultSkin</numIndex>
 										<numIndex index="1">null</numIndex>
 									</numIndex>
 									<numIndex index="0" type="array">

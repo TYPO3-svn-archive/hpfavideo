@@ -12,8 +12,6 @@
 			
 			<label index="flvfile">FLV file</label>
 			<label index="previmg">Preview image</label>
-			<label index="flvfiledam">FLV file - DAM</label>
-			<label index="previmgdam">Preview image - DAM</label>
 			<label index="width">Player width</label>
 			<label index="height">Player height</label>
 			<label index="controlColor">Control color</label>
@@ -26,7 +24,11 @@
 			<label index="autoLoad">Autoload</label>
 			<label index="volume">Volume</label>
 
-			<label index="NoSkin">No Skin</label>
+			<label index="scaleMode.maintainAspectRatio">Maintain aspect ratio</label>
+			<label index="scaleMode.exactFit">Exact fit</label>
+			<label index="scaleMode.noScale">No scale</label>
+
+			<label index="DefaultSkin">Default Skin</label>
 			<label index="skinNo0">Arctic External All</label>
 			<label index="skinNo1">ArcticExternalNoVol</label>
 			<label index="skinNo2">ArcticExternalPlayMute</label>
@@ -69,6 +71,12 @@
 			<label index="videoAlign.center">Center</label>
 			<label index="videoAlign.left">Left</label>
 			<label index="videoAlign.right">Right</label>
+
+			<label index="noJavaScript">JavaScript is not activated. Please activate it to watch the video.</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="noJavaScript">Du hast kein JavaScript aktiviert. Daher wird kein Video angezeigt.</label>
 		</languageKey>
 	</data>
 </T3locallang>
