@@ -30,12 +30,12 @@
  *   69:     function main($content, $conf)
  *  154:     private function showPlayer()
  *  199:     private function getPlayerInitialisationJSCode()
- *  318:     private function getFirstVideo()
- *  333:     private function getFirstVideoPreviewImage()
- *  348:     private function getPlaylistJavaScriptFunctions()
- *  366:     private function getPlaylist()
- *  399:     private function getVideosInformationArray()
- *  427:     private function getSingle($data, $ts)
+ *  323:     private function getFirstVideo()
+ *  338:     private function getFirstVideoPreviewImage()
+ *  353:     private function getPlaylistJavaScriptFunctions()
+ *  372:     private function getPlaylist()
+ *  406:     private function getVideosInformationArray()
+ *  435:     private function getSingle($data, $ts)
  *
  * TOTAL FUNCTIONS: 9
  * (This index is automatically created/updated by the extension "extdeveval")
@@ -162,7 +162,7 @@ class tx_hpfavideo_pi1 extends tslib_pibase {
 
 			// include JavaScript for initialisating the player
 			$GLOBALS['TSFE']->pSetup['jsFooterInline.']['815'] = 'TEXT';
-			$GLOBALS['TSFE']->pSetup['jsFooterInline.']['815.']['value'] = $this->getPlayerInitialisationJSCode();
+			$GLOBALS['TSFE']->pSetup['jsFooterInline.']['815.']['value'] .= $this->getPlayerInitialisationJSCode();
 
 			// Div for player insertion with error message in case JavaScript is not enabled
 			$player =	'<div id="' . $this->playerID . 'Ident">' .
@@ -291,20 +291,25 @@ class tx_hpfavideo_pi1 extends tslib_pibase {
 		// Loading problems (not ready DOM):
 		// Register Listeners and unregister it after it is not needed anymore
 		// if the player plays the video it gets scaled (again)
-		$js .=	$this->playerID .'.addEventListener(\'stateChange\', this, stateChange);' .
-					'function stateChange(event) {' .
+		$js .=	$this->playerID . '.addEventListener(\'stateChange\', this, ' .
+				$this->playerID . 'stateChange);' .
+					'function ' . $this->playerID . 'stateChange(event) {' .
 						'if (event.state ==  \'playing\') {' . $this->playerID .
 							'.setVideoScaleMode(' . $this->playerID .
 								'.getVideoScaleMode());' .
-							$this->playerID . '.removeEventListener(\'stateChange\', this, stateChange);' .
+							$this->playerID .
+							'.removeEventListener(\'stateChange\', this, ' .
+							$this->playerID . 'stateChange);' .
 						'}' .
 					'}';
 		// after the initialisation the color theme gets applied again and the
-		$js .=	$this->playerID .'.addEventListener(\'init\', this, init);' .
-					'function init(event) {' .
+		$js .=	$this->playerID .'.addEventListener(\'init\', this, ' .
+				$this->playerID . 'init);' .
+					'function ' . $this->playerID . 'init(event) {' .
 							$this->playerID . '.setThemeColor(' .
 								$this->playerID . '.getThemeColor());' .
-						$this->playerID .'.removeEventListener(\'init\', this, init);' .
+						$this->playerID .'.removeEventListener(\'init\', this, ' .
+						$this->playerID . 'init);' .
 					'}';
 
 		return $js;
@@ -346,15 +351,16 @@ class tx_hpfavideo_pi1 extends tslib_pibase {
 	 * @return	string		JavaScript functions
 	 */
 	private function getPlaylistJavaScriptFunctions() {
-		return 	'function loadJAVideo(videourl, imgurl) {' .
-					$this->playerID.'.setPreviewImagePath(imgurl);' .
-					$this->playerID.'.load(videourl);' .
+		return 	'function loadJAVideo' . $this->playerID . '(videourl, imgurl) {' .
+					$this->playerID . '.setPreviewImagePath(imgurl);' .
+					$this->playerID .'.load(videourl);' .
 					$this->playerID .
-					'.addEventListener(\'stateChange\', this, stateChange);' .
+					'.addEventListener(\'stateChange\', this, ' .
+					$this->playerID . 'stateChange);' .
 				'}' .
-				'function playJAVideo(videourl, imgurl) {' .
-					'loadJAVideo(videourl, imgurl);' .
-					$this->playerID.'.play(videourl);' .
+				'function playJAVideo' . $this->playerID . '(videourl, imgurl) {' .
+					'loadJAVideo' . $this->playerID . '(videourl, imgurl);' .
+					$this->playerID . '.play(videourl);' .
 				'}';
 	}
 
@@ -378,6 +384,7 @@ class tx_hpfavideo_pi1 extends tslib_pibase {
 
 				$playlist = $this->getSingle(
 							array(
+								'playerID'		=> $this->playerID,
 								'title'			=> $this->pi_getLL('playlistTitle'),
 								'description'	=> $this->pi_getLL('playlistDescription'),
 								'playlistItems'	=> $playlistElements
@@ -402,6 +409,7 @@ class tx_hpfavideo_pi1 extends tslib_pibase {
 
 		foreach ($this->flvfiledam['rows'] as $uid => $video) {
 			$videos[$i++] = array(
+							'playerID'	=> $this->playerID,
 							'title' 	=> $video['title'],
 							'videopath' => $this->basePath. '/' . $this->flvfiledam['files'][$uid],
 							'videouid' => $uid);

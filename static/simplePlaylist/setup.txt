@@ -23,7 +23,7 @@ plugin.tx_hpfavideo_pi1 {
   playlistItem {
     wrap = <li>|</li>
     10 = TEXT
-    10.value = <a href="javascript:playJAVideo('{field:videopath}','{field:imagepath}')">{field:title}</a>
-    10.insertData = 1        
+    10.value = <a href="javascript:playJAVideo{field:playerID}('{field:videopath}','{field:imagepath}')">{field:title}</a>
+    10.insertData = 1
   }
 }
