@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2010 Hauke Hain <hhpreuss@googlemail.com>
+*  (c) 2010-2013 Hauke Hain <hhpreuss@googlemail.com>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -67,8 +67,15 @@ class tx_hpfavideo_pi1_wizicon {
 					 */
 					function includeLocalLang()	{
 						$llFile = t3lib_extMgm::extPath('hpfavideo').'locallang.xml';
-						$LOCAL_LANG = t3lib_div::readLLXMLfile($llFile, $GLOBALS['LANG']->lang);
-
+						$version=class_exists('t3lib_utility_VersionNumber')
+							? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
+							: t3lib_div::int_from_ver(TYPO3_version);
+						if ($version >= 4007000) {
+							$localizationParser = t3lib_div::makeInstance('t3lib_l10n_parser_Llxml');
+							$LOCAL_LANG = $localizationParser->getParsedData($llFile, $GLOBALS['LANG']->lang);
+						} else {
+							$LOCAL_LANG = t3lib_div::readLLXMLfile($llFile, $GLOBALS['LANG']->lang);
+						}
 						return $LOCAL_LANG;
 					}
 				}

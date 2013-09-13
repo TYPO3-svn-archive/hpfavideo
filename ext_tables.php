@@ -3,7 +3,14 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-t3lib_div::loadTCA('tt_content');
+
+$version=class_exists('t3lib_utility_VersionNumber')
+	? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
+	: t3lib_div::int_from_ver(TYPO3_version);
+if ($version < 6001000) {
+	t3lib_div::loadTCA('tt_content');
+}
+
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi1']='layout,select_key,pages';
 
 

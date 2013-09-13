@@ -7,6 +7,11 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="pi1_title">FAVideo player</label>
+			<label index="pi1_plus_wiz_description">Includes a *.flv video with a preview image.</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="pi1_plus_wiz_description">Bindet ein *.flv Video mit einem Vorschaubild ein.</label>
 		</languageKey>
 	</data>
 </T3locallang>

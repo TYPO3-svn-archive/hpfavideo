@@ -30,10 +30,11 @@ More information: http://opensource.adobe.com/wiki/display/favideo/Flash-Ajax+Vi
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '1.1.1',
+	'version' => '1.1.2',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
+			'typo3' => '4.4-6.2.99',
 		),
 		'conflicts' => array(
 		),
